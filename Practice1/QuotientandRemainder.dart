@@ -3,13 +3,11 @@ int divisor = 7;
 int divident = 3;
 double qoutient = divisor / divident;
 
-int Newqoutient = qoutient.toInt();
+int mod = divisor % divident;
 
-int total = Newqoutient * divident;
 
-int remainder = divisor - total;
 print("The divisor is $divisor and the divident is $divident...");
-print("the qoutient is $Newqoutient...");
-print("the Remainder is $remainder...");
+print("the qoutient is $qoutient...");
+print("the Remainder is $mod...");
 
 }
