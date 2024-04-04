@@ -23,9 +23,11 @@ do {
 
   // Calculate total expense
 
-  for (double expense in expenses) {
-    totalExpense += expense;
-  }
+expenses.forEach((number) {
+    totalExpense += number;
+  });
+
+
 print('Your total expenses is: \$$totalExpense');
 
 }
