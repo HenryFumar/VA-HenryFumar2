@@ -7,8 +7,9 @@ import 'dart_flutter_training/practice7.dart' as practice7;
 import 'dart_flutter_training/practice8.dart' as practice8;
 
 //import 'package:flutter_practice/flutter_practice.dart' as flutter_practice;
+
 void main() async {
-  var yes = 'y';
+  bool yes = true;
   do {
     try {
       List<String> excercise = [
@@ -28,17 +29,17 @@ void main() async {
       print("Please Select your choosen Practice");
       int? number = int.parse(stdin.readLineSync()!);
       if (number == 1) {
-        practice1.practice1();
+        practice1.practices1();
       } else if (number == 2) {
-        practice2.practice2();
+        practice2.practices2();
       } else if (number == 3) {
-        practice3.practice3();
+        practice3.practices3();
       } else if (number == 4) {
-        practice4.practice4();
+        practice4.practices4();
       } else if (number == 7) {
-        practice7.practice7();
+        practice7.practices7();
       } else if (number == 8) {
-        await practice8.practice8();
+        await practice8.practices8();
       } else if (number == 0) {
         print("\nThank you......\n");
         break;
@@ -48,5 +49,5 @@ void main() async {
     } catch (e) {
       print('Invalid input');
     }
-  } while (yes == 'y');
+  } while (yes);
 }

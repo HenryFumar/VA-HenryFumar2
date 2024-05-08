@@ -75,8 +75,9 @@ void question8() {
 
 //-----------------------------------Question 9-----------------------------------------------------//
 void question9() {
-  String text = "Hello i am a good boy";
-  String newText = text.replaceAll(" ", "");
+  String text = "                  Hello i am a good boy                 ";
+  //String newText = text.replaceAll(" ", "");
+  String newText = text.trim();
   print('Before: $text');
   print('After: $newText');
   print("====================================================");

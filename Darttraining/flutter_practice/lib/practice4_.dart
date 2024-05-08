@@ -84,7 +84,7 @@ question7(number) {
 //---------------------------------Question 8------------------------------------------------------//
 void question8() {
   List<String> tasks = [];
-  var yes = "y";
+  bool yes = true;
   do {
     try {
       print('1. Add Task');
@@ -130,7 +130,7 @@ void question8() {
     } catch (e) {
       print('It is not a number');
     }
-  } while (yes == "y");
+  } while (yes);
   print("====================================================");
 }
 

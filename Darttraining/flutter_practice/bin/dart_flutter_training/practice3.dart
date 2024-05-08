@@ -2,11 +2,11 @@ import 'dart:io';
 import 'package:index/practice3_.dart' as practice3_question;
 import 'package:index/question.dart' as question_number;
 
-void practice3() {
+void practices3() {
   print('------------------------------------------------\n Practice 3');
   question_number.printquestion3(null);
   print('------------------------------------------------');
-  var yes = 'y';
+  bool yes = true;
   do {
     try {
       print("Select Question number");
@@ -120,5 +120,5 @@ void practice3() {
     } catch (e) {
       print('Invalid input');
     } // catch and print message}
-  } while (yes == 'y');
+  } while (yes);
 }

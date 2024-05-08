@@ -10,6 +10,10 @@ void question1(int number) {
 }
 
 //---------------------------------Question 2------------------------------------------------------//
+bool isAlphabet(String character) {
+  return RegExp(r'^[a-zA-Z]$').hasMatch(character);
+} //function check if letter is from A-Z or a-z
+
 void question2(String value) {
   if (value == 'a' ||
       value == 'e' ||

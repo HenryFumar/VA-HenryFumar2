@@ -1,12 +1,12 @@
 import 'dart:io';
-import 'package:index/practice4_.dart' as practice4_question;
+import 'package:index/practice4_.dart' as practice4;
 import 'package:index/question.dart' as question_number;
 
-void practice4() {
+void practices4() {
   print('------------------------------------------------\n Practice 4');
   question_number.printquestion4(null);
   print('------------------------------------------------');
-  var yes = 'y';
+  bool yes = true;
   do {
     try {
       print("Select Question number");
@@ -14,17 +14,17 @@ void practice4() {
       //-----------------------------------------1------------------------------------------------//
       if (number == 1) {
         question_number.printquestion4(0);
-        practice4_question.question1();
+        practice4.question1();
       }
       //-----------------------------------------2------------------------------------------------//
       else if (number == 2) {
         question_number.printquestion4(1);
-        practice4_question.question2();
+        practice4.question2();
       }
       //-----------------------------------------3------------------------------------------------//
       else if (number == 3) {
         question_number.printquestion4(2);
-        var yes = 'y';
+        bool yes = true;
         List<double> expenses = [];
         print(
             "\n---Please enter your expense amount(note:Hit enter or none numerical will stop adding expense amount)---");
@@ -35,10 +35,10 @@ void practice4() {
             expenses.add(expense);
           } catch (e) {
             print('Thank you....');
-            practice4_question.question3(expenses);
+            practice4.question3(expenses);
             break;
           }
-        } while (yes == 'y');
+        } while (yes);
       }
       //-----------------------------------------4------------------------------------------------//
       else if (number == 4) {
@@ -51,7 +51,7 @@ void practice4() {
         days.add('Friday');
         days.add('Saturday');
         days.add('Sunday');
-        practice4_question.question4(days);
+        practice4.question4(days);
       }
       //-----------------------------------------5------------------------------------------------//
       else if (number == 5) {
@@ -65,24 +65,24 @@ void practice4() {
           'Vincent',
           'Andrew E'
         ];
-        practice4_question.question5(names);
+        practice4.question5(names);
       }
       //-----------------------------------------6------------------------------------------------//
       else if (number == 6) {
         question_number.printquestion4(5);
         String country = 'Washington, D.C.';
-        practice4_question.question6(country);
+        practice4.question6(country);
       }
       //-----------------------------------------7------------------------------------------------//
       else if (number == 7) {
         question_number.printquestion4(6);
         int number = 4;
-        practice4_question.question7(number);
+        practice4.question7(number);
       }
       //-----------------------------------------8------------------------------------------------//
       else if (number == 8) {
         question_number.printquestion4(7);
-        practice4_question.question8();
+        practice4.question8();
       }
       //-----------------------------------------Exit------------------------------------------------//
       else if (number == 0) {
@@ -94,5 +94,5 @@ void practice4() {
     } catch (e) {
       print('Invalid input');
     } // catch and print message}
-  } while (yes == 'y');
+  } while (yes);
 }

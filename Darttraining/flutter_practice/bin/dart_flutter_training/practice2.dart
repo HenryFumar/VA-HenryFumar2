@@ -1,12 +1,12 @@
 import 'dart:io';
-import 'package:index/practice2_.dart' as practice2_question;
+import 'package:index/practice2_.dart' as practice2;
 import 'package:index/question.dart' as question_number;
 
-void practice2() {
+void practices2() {
   print('------------------------------------------------\n Practice 2');
   question_number.printquestion2(null);
   print('------------------------------------------------');
-  var yes = 'y';
+  bool yes = true;
   do {
     try {
       print("Select Question number");
@@ -14,82 +14,78 @@ void practice2() {
 //-----------------------------------------1------------------------------------------------//
       if (number == 1) {
         question_number.printquestion2(0); // print question
-        var yes = "y";
+        bool yes = true;
         do {
           try {
             print("Enter your Number");
             int? number = int.parse(stdin.readLineSync()!);
-            practice2_question.question1(number);
+            practice2.question1(number);
             break;
           } catch (e) {
             print('Invalid input');
           }
-        } while (yes == "y");
+        } while (yes);
       }
 //-------------------------------------------2----------------------------------------------//
       else if (number == 2) {
         question_number.printquestion2(1); // print question
-        var yes = "y";
+        bool yes = true;
         do {
-          bool isAlphabet(String character) {
-            return RegExp(r'^[a-zA-Z]$').hasMatch(character);
-          } //function check if letter is from A-Z or a-z
-
           print('Enter your Letter');
           String value = stdin.readLineSync()!;
           if (value.length != 1) {
             print('Please Enter 1 character');
           } else {
-            if (isAlphabet(value)) {
-              practice2_question.question2(value);
+            if (practice2.isAlphabet(value)) {
+              practice2.question2(value);
               break;
             } else {
               print('$value is not an alphabet character.');
             }
           }
-        } while (yes == 'y');
+        } while (yes);
       }
 //-------------------------------------------3----------------------------------------------//
       else if (number == 3) {
         question_number.printquestion2(2); // print question
-        var yes = 'y';
+        bool yes = true;
         do {
           try {
             print("Enter your Number");
             int? number = int.parse(stdin.readLineSync()!);
-            practice2_question.question3(number);
+            practice2.question3(number);
             break;
           } catch (e) {
             print('Invalid Input');
           }
-        } while (yes == 'y');
+        } while (yes);
       }
 //-------------------------------------------4----------------------------------------------//
       else if (number == 4) {
         question_number.printquestion2(3); // print question
-        practice2_question.question4();
+        practice2.question4();
       }
 //-------------------------------------------5----------------------------------------------//
       else if (number == 5) {
         question_number.printquestion2(4); // print question
-        practice2_question.question5();
+        practice2.question5();
       }
 //-------------------------------------------6----------------------------------------------//
       else if (number == 6) {
         question_number.printquestion2(5); // print question
-        practice2_question.question6();
+        practice2.question6();
       }
 //-------------------------------------------7----------------------------------------------//
       else if (number == 7) {
         question_number.printquestion2(6); // print question
-        practice2_question.question7();
+        practice2.question7();
       }
 //-------------------------------------------8----------------------------------------------//
       else if (number == 8) {
         question_number.printquestion2(7); // print question
         print(
             "(*) = Multipication,\n(/) = Division,\n(-) = Subtraction,\n(+) = Addition\n");
-        var yes = 'y';
+        bool yes = true;
         do {
           try {
             print("Please enter your first Number");
@@ -103,17 +99,17 @@ void practice2() {
 
             print("Please enter your last Number");
             int? num2 = int.parse(stdin.readLineSync()!);
-            practice2_question.question8(num1, num2, value);
+            practice2.question8(num1, num2, value);
             break;
           } catch (e) {
             print('Invalid Input');
           }
-        } while (yes == 'y');
+        } while (yes);
       }
 //-------------------------------------------9----------------------------------------------//
       else if (number == 9) {
         question_number.printquestion2(8); // print question
-        practice2_question.question9();
+        practice2.question9();
       }
 //-------------------------------------------exit-------------------------------------------//
       else if (number == 0) {
@@ -125,5 +121,5 @@ void practice2() {
     } catch (e) {
       print('Invalid input');
     } // catch and print message}
-  } while (yes == 'y');
+  } while (yes);
 }
